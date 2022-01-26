@@ -5,7 +5,7 @@ html, body {
     font-style: normal;
     margin: 0;
     padding: 0;
-
+    scroll-behavior: smooth;
 }
 img {
     width: 100%;
@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     font-size: 1.8rem;
     text-align: center;
+
 }
 
 .main-display__nav-link:not(last-child) {
@@ -103,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-display__nav-link a {
     color: #737373;
     text-decoration: none;
+
 }
 /* стили main-center */
 .main-display__left {
@@ -143,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 7px;
 }
 /* About block */
+ 
 .about__items{
 /*     display: flex;
     justify-content: space-between; */
@@ -164,6 +167,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 5rem;
     line-height: 118%;
     text-align: center;
+    scroll-behavior: smooth;
 }
 .about__header span {
     /* чтобы сделать цвет букв градиентом, нужно сделать фон и применить 2 команды идущие после градиента */
