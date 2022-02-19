@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="./js/swiperScript.js" defer></script>
+    <script src="./js/modal.js" defer></script>
     <title>Evarugs</title>
 </head>
 <body>
@@ -19,8 +22,8 @@
                         <img src="/images/phone.svg" alt="phone">
                     </div>
                     <div class="header__telephone-text">
-                        <span>+375 29 292-29-29 (VEL)</span>
-                        <span>+375 33 333-33-33 (МТС)</span>
+                        <a href="tel:+375 29 292-29-29"><span>+375 29 292-29-29 (VEL)</span></a>
+                        <a href="tel:+375 33 333-33-33"><span>+375 33 333-33-33 (МТС)</span></a>
                     </div>
                 </div>
                 <div class="header__maps">
@@ -31,14 +34,15 @@
                 </div>
                 <div class="header__inst">
                     <div class="header__inst-img">
-                        <img src="/images/inst.svg" alt="inst">
+                        <a href="#">
+                            <img src="/images/inst.svg" alt="inst">
+                        </a>
                     </div>
                     <span>посетите нашу <br>страницу</span>
                 </div>
             </div>
         </div>
     </header>
-
     <!-- Верстка main  -->
     <main>
         <div class="main-display__wrap">
@@ -72,6 +76,7 @@
                     </div>
                     <div class="main-display__right">
                         <img class="main-display__right__img"  src="/images/main-center-right-img.png" alt="main: right-img">
+                        <img class="main-display__right__img_back"  src="/images/background-rightmain.png" alt="main: background">
                     </div>
                 </div>
             </div>
@@ -109,14 +114,89 @@
                             <p class="about__item-text">Автомобильные коврики EVA можно заказать и в индивидуальных размерах и в разных цветах, которые комбинируется на выбор покупателя с такими же цветами окантовочной полипропиленовой ременной ленты.</p>
                         </div>
                     </div>
+                    <div class="about__background">
+                        <img src="./images/background-left.png" alt="background">
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div class="review">
+            <div class="container extra">
+                <div class="review__slider swiper">
+                    <div class="swiper-wrapper review__wrapper">
+                        <div class="review__slide swiper-slide">
+                            <div class="review__slide-text">
+                                Коврики супер!!! Качество на высшем уровне!!! Удачи и побольше заказов вам!!! Большое спасибо!
+                            </div>
+                            <div class="review__slide-name">Константин В.</div>
+                            <div class="review__slide-img">
+                            <div class="review__slide-photo">
+                                <img src="./images/photo-review1.png" alt="photo-comment">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="review__slide swiper-slide">
+                            <div class="review__slide-text">
+                                Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.
+                            </div>
+                            <div class="review__slide-name">Вера К.</div>
+                            <div class="review__slide-img">
+                                <div class="review__slide-photo">
+                                    <img src="./images/photo-review2.png" alt="photo-comment">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__slide swiper-slide">
+                            <div class="review__slide-text">
+                                Спасибо, все приехало, поставил. Результатом доволен, в машине супер! Заказывал на Ниссан.
+                            </div>
+                            <div class="review__slide-name">Николай П.</div>
+                            <div class="review__slide-img">
+                                <div class="review__slide-photo">
+                                    <img src="./images/photo-review3.png" alt="photo-comment">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__slide swiper-slide">
+                            <div class="review__slide-text">
+                                Коврики супер!!! Качество на высшем уровне!!! Удачи и побольше заказов вам!!! Большое спасибо!
+                            </div>
+                            <div class="review__slide-name">Константин В.</div>
+                            <div class="review__slide-img">
+                                <div class="review__slide-photo">
+                                    <img src="./images/photo-review1.png" alt="photo-comment">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__slide swiper-slide">
+                            <div class="review__slide-text">
+                                Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.
+                            </div>
+                            <div class="review__slide-name">Вера К.</div>
+                            <div class="review__slide-img">
+                                <div class="review__slide-photo">
+                                    <img src="./images/photo-review2.png" alt="photo-comment">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__slide swiper-slide">
+                            <div class="review__slide-text">
+                                Спасибо, все приехало, поставил. Результатом доволен, в машине супер! Заказывал на Ниссан.
+                            </div>
+                            <div class="review__slide-name">Николай П.</div>
+                            <div class="review__slide-img">
+                                <div class="review__slide-photo">
+                                    <img src="./images/photo-review3.png" alt="photo-comment">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
     <footer class="footer">
-        <div class="container">
+        <div class="container extra">
             <div class="footer__wrapper" id="contacts">
                 <div class="footer__inst">
                     <h3 class="footer__header">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
@@ -147,6 +227,35 @@
             </div>
         </div>
     </footer>
-    
+    <div class="form">
+        <form class="modal" action="#">
+            <div class="modal__inner">
+                <div class="modal__inner-title">Форма заявки</div>
+                <div class="modal__inner-elements">
+                    <div class="elements__item">
+                        <div class="modal__input-wrap">
+                            <input class="modal__input" type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="modal__input-wrap">
+                            <input class="modal__input" type="email" placeholder="Ваш e-mail">
+                        </div>
+                    </div>    
+                    <div class="elements__item long">
+                        <textarea class="modal__input area-input" cols="1" rows="10" placeholder="Ваше сообщение (марка автомобиля, цвет ковриков, номер телефона)"></textarea>
+                    </div>
+                    <div class="elements__policy">
+                        <input type="checkbox" id="check">
+                        <label for="check">
+                            <span>Я соглашаюсь с</span>
+                            <a href="№">Политикой безопасности</a>
+                        </label>
+                    </div>
+                    <button class="main-display__left-button form__button" type="button">Отправить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

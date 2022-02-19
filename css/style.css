@@ -1,16 +1,22 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*:focus:not(:focus-visible) {
+    outline: none;
+}
 html, body {
-    font-size: 62.5%;/* делаем шрифт 10px чтобы было легче переводить в ремы */
+    font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
     color: #000000;
     font-style: normal;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    margin: 0 auto;
 }
 img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
 }
 ul {
     padding-left: 0;
@@ -34,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 63%;
+    width: 100%;
 }
 .header__wrapper {
     display: flex;
@@ -59,6 +66,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
 }
+.header__telephone-text a {
+    text-decoration: none;
+    color: #fff;
+}
 .header__maps span {
     line-height: 107%;
 }
@@ -67,6 +78,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 100%;
 }
 /* main-top */
+.main-display__wrap {
+    background: url(../images/Frame-1.png) 3% 89% no-repeat,
+    url(../images/Frame-2.png) 7% 79% no-repeat,
+    url(../images/Frame-3.png) 9.5% 82% no-repeat,
+    url(../images/Frame-4.png) 30% 33% no-repeat,
+    url(../images/Frame-5.png) 28% 31% no-repeat; 
+}
 .main-display__top {
     padding-top: 4.7rem;
     display: flex;
@@ -95,16 +113,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     font-size: 1.8rem;
     text-align: center;
-
 }
-
 .main-display__nav-link:not(last-child) {
     margin-right:  2.5rem;
 }
 .main-display__nav-link a {
     color: #737373;
     text-decoration: none;
-
 }
 /* стили main-center */
 .main-display__left {
@@ -117,6 +132,13 @@ h1, h2, h3, h4, h5, h6 {
 .main-display__right {
     width: 53.3rem;
     height: 68.6rem;
+    position: relative;
+}
+.main-display__right__img_back {
+    position: absolute;
+    top: 11%;
+    right: -13%;
+    z-index: -1;
 }
 .main-display__left-header {
     font-weight: 900;
@@ -145,16 +167,24 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 7px;
 }
 /* About block */
- 
+.about {
+    margin-bottom: 22.5rem;
+}
 .about__items{
 /*     display: flex;
     justify-content: space-between; */
     /* сделаем через грид */
     display: grid;
     grid-template-columns: repeat(3, 29%);/* 3 колонки по 29% каждая */
-    gap: 0rem 6.1rem;
+    gap: 0rem 8rem;
+    position: relative;
 }
-
+.about__background {
+    position: absolute;
+    top: -1%;
+    left: -13%;
+    z-index: -1;
+}
 .about__item {
     /* width: 29%; */
     box-shadow: 0px 0px 40px rgba(184, 0, 95, 0.2);
@@ -178,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 .about__item-img {
     width: 100%;
     height: 21.5rem;
+    overflow: hidden;
 }
 .about__item-img img {
     width: 100%;
@@ -198,7 +229,197 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 114%;
     color: #767676;
 }
+/* стили слайдера */
+.review {
+    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+}
+.extra {
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+}
+.review__wrapper {
+    padding-top: 10rem;
+    padding-bottom: 7.2rem;
+    width: 100%;
+}
+.review__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.9rem;
+    min-height: 26rem;
+    padding: 6.3rem 4.7rem 0 4.7rem;
+}
+/* .swiper-slide {
+    min-width: 536px;
+} */
+.review__slide-text {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 117%;
+    text-align: center;
+}
+.review__slide-text::after {
+    content: '';
+    display: block;
+    height: 0.2rem;
+    width: 13rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    background: linear-gradient(90deg, rgba(185, 1, 96, 1) 0%, rgba(61, 91, 245, 1) 100%);
+}
+.review__slide-name {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 116%;
+    text-align: center;
+    color: #8E8E8E;
+    margin-bottom: 2rem;
+}
+.review__slide-photo {
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    width: 9.3rem;
+    height: 10.6rem;
+    background-color: #fff;
+}
+.review__slide-img { 
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    width: 10.3rem;
+    height: 11.6rem;
+    background: linear-gradient(180deg, #e29bb5 -0.03%, #adaee6 100.01%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* стили модального окна */
+.modal {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5rem);
+    display: none;
+}
+.modal__inner {
+    width: 118rem;
+    margin: 0 auto;
+    padding: 4.5rem 0;
+    background: #fff url(../images/MaskGroup.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 3.5rem rgba(212, 20, 90, 0.25);
+    border-radius: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem; 
+    margin-bottom: 10rem;
+    height: 45rem;
+}
+.modal__inner-title {
+    margin-bottom: 3.27rem;
+    font-size: 2.4rem;
+    line-height: 117%;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+.modal__inner-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elements__item {
+    width: 75rem;
+    display: flex;
+    justify-content: space-between;
+}
+.elements__item:first-child {
+    margin-bottom: 1.8rem;
+}
+.modal__input-wrap {
+    width: 36rem;
+    min-height: 5rem;
+}
+.modal__input {
+    width: 100%;
+    background: #FFFFFF;
+    border: 0.1rem solid #A2A2A2;
+    border-radius: 0.9rem;
+    display: block;
+    height: 5rem;
+    padding-left: 2rem;
+}
+.modal__input::placeholder {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 116%;
+    color: #989898;
+}
+.modal__input-long {
+}
+.elements__policy {
+}
+.area-input {
+    padding-top: 1.3rem;
+    width: 100%;
+    min-height: 8rem;
+}
+.area-input::placeholder {
+    font-size: 1.6rem;
+}
+textarea {
+    width: 100%;
+    resize: none;
+}
+.long {
+    margin-bottom: 4.2rem;
+}
+.form__button {
+    width: 17rem;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 115%;
+    text-align: center;
+    padding: 1rem;
+    height: 4.2rem;
+}
+.elements__policy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 115%;
+}
+.elements__policy a {
+    text-decoration: none;
+}
+.elements__policy input {
+    margin-right: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
 
+.active {
+    display: flex;
+}
 /* Footer */
 .footer {
     position: relative; /* позиционируем относительно чтобы раскидать картинки */
@@ -208,11 +429,12 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 2.1rem;
-    padding: 17.2rem 12rem 8.4rem 12rem;
+    padding: 17.2rem 15rem 8.4rem 15rem;
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 114%;
     color: #000000;
+    position: relative;
 }
 .footer__inst-img {
     width: 3.3rem;
@@ -225,16 +447,16 @@ h1, h2, h3, h4, h5, h6 {
 /* картинки футера, позиционирую абсолютно */
 .footer__decor-1 {
     position: absolute;
-    left: 9%;
-    top: 48%;
+    left: 6%;
+    top: 35%;
     transform: translate(-50%, -50%);
     width: 11rem;
     height: 12.5rem;
 }
 .footer__decor-2 {
     position: absolute;
-    left: 83%;
-    top: 48%;
+    left: 88%;
+    top: 37%;
     transform: translate(-50%, -50%);
     width: 23.3rem;
     height: 26.4rem;
@@ -249,4 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__telephone ul {
     padding-top: 1rem;
+}
+.footer__adress ul > li {
+    padding-bottom: 2rem;
 }
